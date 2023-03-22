@@ -1,0 +1,92 @@
+.aboutSection{
+        background-color: white;
+        border: transparent;
+        border-radius: 25px;
+        padding-top: 7px; 
+        width: 397px;
+        margin-top: 176px;
+        margin-left: 1325px;
+        margin-right: 138px;
+        position: fixed;
+        top: 20px;
+    
+}
+
+h1{
+    position: fixed;
+    background-color: white;
+    border: transparent;
+    border-radius: 25px;
+    margin-left: 1325px;
+    margin-top: 90px;
+    font-family: 'proxima-nova', sans-serif;
+    color: #1E2454;
+    font-size: 35pt;
+    width: 307px;
+    height: 100px;
+    padding-left: 90px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+
+.cardSection{
+        background-color: transparent;
+        border: transparent;
+        border-radius: 25px;
+        width: 592px;
+        height: 100%;
+        margin-left: 628px;
+        margin-right: 658px;
+        margin-top: 1%;
+}
+
+.BarSection{
+        background-color: transparent;
+        border: transparent;
+        border-radius: 25px;
+        padding-top: 0px; 
+        margin-top: 176px;
+        margin-left: 306px;
+        margin-right: 1025px;
+        position: fixed;
+        top: 9px;
+}
+
+a{
+        margin-left: 16%;
+        margin-top: 1%;
+        position: fixed;
+        width: 239px;
+        height: 136px;
+}
+
+button {
+        position: fixed;
+        margin-left: 12%;
+        margin-top: 41%;
+        padding: 12.5px 30px;
+        border: 0;
+        border-radius: 29px;
+        background-color: white;
+        color: #1E2454;
+        font-size: 19pt;
+        font-family: 'proxima-nova', sans-serif;
+        font-weight: Bold;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        width: 288px;
+        height: 72px;
+      }
+      
+      button:hover {
+        background-color: #1E2454;
+        color: white;
+        box-shadow: 0 0 20px #6fc5ff50;
+      }
+      
+      button:active {
+        background-color: white;
+        transition: all 0.25s;
+        -webkit-transition: all 0.25s;
+        box-shadow: none;
+}
