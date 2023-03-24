@@ -79,3 +79,12 @@
     display: flex;
     flex-direction: row;
   }
+  @media screen and (max-width: 400px){
+    p {
+      font-size:14px;
+      font-family: 'proxima-nova', sans-serif;
+      color: #6c6c6c;
+      font-weight: lighter;
+      margin-top: 9%;
+    }
+  }

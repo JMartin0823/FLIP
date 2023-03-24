@@ -58,6 +58,7 @@ class AppContainer extends HTMLElement {
                 this.shadowRoot.innerHTML += `<link rel="stylesheet" href="./index.css">`;
                 this.shadowRoot.innerHTML += `<h1>About</h1>`;
                 this.shadowRoot.innerHTML += `<my-search></my-search>`;
+                this.shadowRoot.innerHTML += `<my-bottom></my-bottom>`;
                 this.shadowRoot.innerHTML += `<a href="index.html"><img src="./fliplogo.png" alt=""></a>`;
                 this.shadowRoot.innerHTML += `<button>Post</button>`;
 

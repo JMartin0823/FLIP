@@ -15,7 +15,7 @@
   }
   
   .bar{
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.745);
       border: transparent;
       padding: 1rem;
       font-size: 1rem;
@@ -23,7 +23,6 @@
       height: 11px;
       border-radius: 1rem;
       cursor: pointer;
-      margin-bottom: 20px;
     }
   
     .container input:focus {
@@ -33,7 +32,7 @@
   
   .buttonsearch {
     float: left;
-    opacity: 30%;
+    opacity: 80%;
     background: transparent;
     border: transparent;
     display: flex;
@@ -42,5 +41,48 @@
     padding-top: 5px;
     padding-right: 13px;
     text-decoration: none;
+    width: 3%;
+    height: 3%;
   }
+
+  @media screen and (max-width: 400px){
+    .searchbar {
+      background-color: #1E2454;
+      position: fixed; 
+      padding-top: 3%;
+      padding-bottom: 3%;
+      padding-left: 20%;
+      padding-right: 3%;    
+    }
+    
+    ::placeholder {
+      color: #1E2454;
+    }
+    
+    .bar{
+        background-color: rgba(255, 255, 255, 0.71);
+        border: transparent;
+        font-size: 1rem;
+        width: 49%;
+        border-radius: 1rem;
+        cursor: pointer;
+        margin-top: 2%;
+      }
+    
+      .container input:focus {
+        outline-color: #1E2454;
+      }
+    
+    
+    .buttonsearch {
+    float: left;
+    opacity: 70%;
+    display: flex;
+    color: white;
+    width: 14%;
+    height: 14%;
+    margin-top: 2%;
+    color: #FD6542;
+
+  }}
   
