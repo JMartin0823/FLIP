@@ -1,12 +1,12 @@
-import dataCard from "./data.js";
-import dataSidebar from "./data2.js";
-import dataAbout from "./data3.js";
-import data4 from "./data4.js";
+import dataCard from "./data";
+import dataSidebar from "./data2";
+import dataAbout from "./data3";
+import data4 from "./data4";
 
-import "./components/index.js";
-import About, { Attribute } from "./components/about/about.js";
-import Card, { Attribut } from "./components/card/card.js";
-import Sidebar, { Attribu } from "./components/sidebar/sidebar.js";
+import "./components/index";
+import About, { Attribute } from "./components/about/about";
+import Card, { Attribut } from "./components/card/card";
+import Sidebar, { Attribu } from "./components/sidebar/sidebar";
 
 class AppContainer extends HTMLElement {
     AboutS: About[] = [];
