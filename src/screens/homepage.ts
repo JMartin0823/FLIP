@@ -1,14 +1,14 @@
-import dataCard from "./data";
-import dataSidebar from "./data2";
-import dataAbout from "./data3";
-import data4 from "./data4";
+import dataCard from "./mocks/data.ts";
+import dataSidebar from "./mocks/data2";
+import dataAbout from "./mocks/data3";
+import data4 from "./mocks/data4";
 
 import "./components/index";
 import About, { Attribute } from "./components/about/about";
 import Card, { Attribut } from "./components/card/card";
 import Sidebar, { Attribu } from "./components/sidebar/sidebar";
 
-class AppContainer extends HTMLElement {
+class AppHomePage extends HTMLElement {
     AboutS: About[] = [];
     CardS: Card[] = [];
     SideB: Sidebar[] = [];
@@ -17,7 +17,7 @@ class AppContainer extends HTMLElement {
         super();
         this.attachShadow({ mode: "open" });
         
-        dataAbout.forEach((user) => {
+        dataAbout.forEach((user:any) => {
             const aboutCard = this.ownerDocument.createElement(
                 "my-about"
                 ) as About;
@@ -25,7 +25,7 @@ class AppContainer extends HTMLElement {
                 aboutCard.setAttribute(Attribute.description, user.description);
                 this.AboutS.push(aboutCard);
             });
-            dataCard.forEach((user) => {
+            dataCard.forEach((user:any) => {
                 const sectionCard = this.ownerDocument.createElement(
                     "my-card"
                     ) as Card;
@@ -40,7 +40,7 @@ class AppContainer extends HTMLElement {
                     this.CardS.push(sectionCard);
                 });
 
-                dataSidebar.forEach((user) => {
+                dataSidebar.forEach((user:any) => {
                 const sectionBar = this.ownerDocument.createElement(
                     "my-sidebar"
                     ) as Sidebar;
@@ -55,11 +55,11 @@ class AppContainer extends HTMLElement {
         
         render() {
             if (this.shadowRoot) {
-                this.shadowRoot.innerHTML += `<link rel="stylesheet" href="./index.css">`;
+                this.shadowRoot.innerHTML += `<link rel="stylesheet" href="./homepage.css">`;
                 this.shadowRoot.innerHTML += `<h1>About</h1>`;
                 this.shadowRoot.innerHTML += `<my-search></my-search>`;
                 this.shadowRoot.innerHTML += `<my-bottom></my-bottom>`;
-                this.shadowRoot.innerHTML += `<a href="index.html"><img src="./fliplogo.png" alt=""></a>`;
+                this.shadowRoot.innerHTML += `<a href="index.html"><img src="./img/fliplogo.png" alt=""></a>`;
                 this.shadowRoot.innerHTML += `<button>Post</button>`;
 
                 const aboutSection=this.ownerDocument.createElement("section")
@@ -87,5 +87,5 @@ class AppContainer extends HTMLElement {
                   }
                 }
     
-    customElements.define("app-container", AppContainer);
+    customElements.define("app-homepage", AppHomePage);
     

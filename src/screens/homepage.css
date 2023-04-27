@@ -1,11 +1,11 @@
 body{
-        background-image: url(/public/Background.png);
+        background-image: url(/img/Background.png);
         background-repeat: no-repeat;
         background-attachment: fixed;
 }
 
 .aboutSection{
-        background-color: rgba(255, 255, 255, 0.745);
+        background-color: #f7dbcd;
         border: transparent;
         border-radius: 25px;
         border-top-left-radius: 0px;
@@ -23,8 +23,8 @@ body{
 h1{
     position: fixed;
     left: 70.5%;
-    top: 9.1%;
-    background-color: rgba(255, 255, 255, 0.745);
+    top: 9%;
+    background-color: #f7dbcd;
     border: transparent;
     border-radius: 0px;
     border-top-left-radius: 25px;
@@ -126,7 +126,7 @@ button {
                 margin-top: 20%;
         }
         body{
-                background-image: url(/public/Background2.png);
+                background-image: url(/img/Background2.png);
                 background-repeat: no-repeat;
                 background-attachment: fixed;
         }
