@@ -1,3 +1,6 @@
+// import styles from './card.css';
+// import { loadCss } from '../../utils/styles';
+
 export enum Attribut {
     "name" = "name",
     "username"= "username",
@@ -82,9 +85,10 @@ class Card extends HTMLElement {
         // }
         
         render() {
+            // loadCss(this, styles)
             if (this.shadowRoot) {
                 this.shadowRoot.innerHTML = `
-                <link rel="stylesheet" href="./components/card/card.css">
+                <link rel="stylesheet" href="./card.css">
                 <section class="all">
             <section>
               <section class="top">
