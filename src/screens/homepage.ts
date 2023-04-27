@@ -1,22 +1,22 @@
-import dataCard from "./mocks/data.ts";
-import dataSidebar from "./mocks/data2";
-import dataAbout from "./mocks/data3";
-import data4 from "./mocks/data4";
+import dataCard from "../mocks/data";
+import dataSidebar from "../mocks/data2";
+import dataAbout from "../mocks/data3";
+import data4 from "../mocks/data4";
 
 import "./components/index";
-import About, { Attribute } from "./components/about/about";
-import Card, { Attribut } from "./components/card/card";
-import Sidebar, { Attribu } from "./components/sidebar/sidebar";
+import About, { Attribute } from "../components/about/about";
+import Card, { Attribut } from "../components/card/card";
+import Sidebar, { Attribu } from "../components/sidebar/sidebar";
 
 class AppHomePage extends HTMLElement {
     AboutS: About[] = [];
     CardS: Card[] = [];
     SideB: Sidebar[] = [];
-    
+
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
-        
+
         dataAbout.forEach((user:any) => {
             const aboutCard = this.ownerDocument.createElement(
                 "my-about"
@@ -48,11 +48,11 @@ class AppHomePage extends HTMLElement {
                     this.SideB.push(sectionBar);
                 });
         }
-        
+
         connectedCallback() {
             this.render();
         }
-        
+
         render() {
             if (this.shadowRoot) {
                 this.shadowRoot.innerHTML += `<link rel="stylesheet" href="./homepage.css">`;
@@ -86,6 +86,6 @@ class AppHomePage extends HTMLElement {
 
                   }
                 }
-    
+
     customElements.define("app-homepage", AppHomePage);
-    
+
