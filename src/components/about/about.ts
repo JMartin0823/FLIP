@@ -6,7 +6,7 @@ export enum Attribute {
 class About extends HTMLElement {
     name?: string;
     description?: string;
-    
+
     static get observedAttributes() {
         const attrs: Record<Attribute, null> = {
             name: null,
@@ -14,16 +14,16 @@ class About extends HTMLElement {
         };
         return Object.keys(attrs);
     }
-    
+
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
     }
-    
+
     connectedCallback() {
         this.render();
     }
-    
+
     attributeChangedCallback(
         propName: Attribute,
         _: string | undefined,
@@ -34,14 +34,14 @@ class About extends HTMLElement {
                 this[propName] = newValue;
                 break;
             }
-            
+
             this.render();
         }
-        
+
         render() {
             if (this.shadowRoot) {
                 this.shadowRoot.innerHTML = `
-                <link rel="stylesheet" href="./components/about/about.css">
+                <link rel="stylesheet" href="./about.css">
                 <section>
                 <h3>${this.name}</h3>
                 <p>${this.description}<span>
