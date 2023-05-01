@@ -1,3 +1,4 @@
+import styles from "./about.css"
 export enum Attribute {
     "name" = "name",
     "description" = "description",
@@ -47,6 +48,9 @@ class About extends HTMLElement {
                 <p>${this.description}<span>
                 </section>
                 `;
+                const css = this.ownerDocument.createElement("style");
+            css.innerHTML = styles;
+            this.shadowRoot?.appendChild(css);
             }
         }
     }

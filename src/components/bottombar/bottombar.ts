@@ -1,3 +1,5 @@
+import styles from "./bottombar.css"
+
 class Bottombar extends HTMLElement {
 
     constructor() {
@@ -40,6 +42,9 @@ class Bottombar extends HTMLElement {
          </svg></button>
             </section>
                 `;
+                const css = this.ownerDocument.createElement("style");
+            css.innerHTML = styles;
+            this.shadowRoot?.appendChild(css);
             }
         }
     }

@@ -1,7 +1,7 @@
 {
-  "name": "flip",
+  "name": "dca_scoffolding",
   "version": "1.0.0",
-  "description": "",
+  "description": "this is a base project",
   "main": "index.js",
   "scripts": {
     "start": "serve",
@@ -11,11 +11,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^6.7.3",
     "serve": "^14.2.0",
     "ts-loader": "^9.4.2",
     "typescript": "^5.0.2",
     "webpack": "^5.76.3",
-    "webpack-cli": "^5.0.1",
-    "css-loader": "^6.7.3"
+    "webpack-cli": "^5.0.1"
   }
 }

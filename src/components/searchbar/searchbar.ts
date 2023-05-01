@@ -1,3 +1,4 @@
+import styles from "./searchbar.css"
 class Searchbar extends HTMLElement {
 
     constructor() {
@@ -23,6 +24,9 @@ class Searchbar extends HTMLElement {
             </form>
             </section>
                 `;
+                const css = this.ownerDocument.createElement("style");
+            css.innerHTML = styles;
+            this.shadowRoot?.appendChild(css);
             }
         }
     }

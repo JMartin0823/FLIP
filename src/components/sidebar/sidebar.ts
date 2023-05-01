@@ -1,3 +1,4 @@
+import styles from "./sidebar.css"
 export enum Attribu {
     "name" = "name",
 }
@@ -43,6 +44,9 @@ class Sidebar extends HTMLElement {
                 <Button>${this.name}</Button>
                 </section>
                 `;
+                const css = this.ownerDocument.createElement("style");
+            css.innerHTML = styles;
+            this.shadowRoot?.appendChild(css);
             }
         }
     }

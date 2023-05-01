@@ -1,7 +1,9 @@
-body{
-        background-image: url(/img/Background.png);
+.all{
+        background-image: url("../img/Background.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
+        height: 100%;
+        width: 100%;
 }
 
 .aboutSection{
@@ -126,7 +128,7 @@ button {
                 margin-top: 20%;
         }
         body{
-                background-image: url(/img/Background2.png);
+                background-image: url("../img/Background.png");
                 background-repeat: no-repeat;
                 background-attachment: fixed;
         }

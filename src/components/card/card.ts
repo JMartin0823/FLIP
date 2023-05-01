@@ -1,5 +1,4 @@
-// import styles from './card.css';
-// import { loadCss } from '../../utils/styles';
+import styles from './card.css';
 
 export enum Attribut {
     "name" = "name",
@@ -114,6 +113,9 @@ class Card extends HTMLElement {
               </label>
               </section>
                 `;
+                const css = this.ownerDocument.createElement("style");
+            css.innerHTML = styles;
+            this.shadowRoot?.appendChild(css);
             }
         }
     }
