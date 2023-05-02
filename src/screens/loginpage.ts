@@ -1,3 +1,4 @@
+import styles from "./loginpage.css"
 class AppLogIn extends HTMLElement {
 
     constructor() {
@@ -10,8 +11,17 @@ class AppLogIn extends HTMLElement {
 
         render() {
             if (this.shadowRoot) {
-                this.shadowRoot.innerHTML += `<link rel="stylesheet" href="./loginpage.css">`;
-                this.shadowRoot.innerHTML += `<my-login></my-login>`;
+                const login=this.ownerDocument.createElement("my-login")
+
+                const all=this.ownerDocument.createElement("section")
+                all.className="all"
+                all.appendChild(login)
+                this.shadowRoot?.appendChild(all)
+
+                const css = this.ownerDocument.createElement("style");
+                css.innerHTML = styles;
+                this.shadowRoot?.appendChild(css);
+
                   }
                 }
             }

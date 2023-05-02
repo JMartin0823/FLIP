@@ -1,4 +1,5 @@
 import "./screens/homepage"
+import "./screens/loginpage"
 import "./components/export"
 import styles from "./index.css"
 
@@ -13,7 +14,7 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        const dashboard = this.ownerDocument.createElement('app-homepage');
+        const dashboard = this.ownerDocument.createElement('app-loginpage');
         this.shadowRoot?.appendChild(dashboard);
 
         const css = this.ownerDocument.createElement("style");
