@@ -12,6 +12,7 @@ class AppProfile extends HTMLElement {
         render() {
             if (this.shadowRoot) {
                 const login=this.ownerDocument.createElement("my-pfsidebar")
+                this.shadowRoot.innerHTML += `<img src="./img/fliplogo2.png" alt="">`
 
                 const all=this.ownerDocument.createElement("section")
                 all.className="all"

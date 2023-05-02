@@ -16,8 +16,8 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        const dashboard = this.ownerDocument.createElement('app-homepage');
-        this.shadowRoot?.appendChild(dashboard);
+        // const dashboard = this.ownerDocument.createElement('app-homepage');
+        // this.shadowRoot?.appendChild(dashboard);
 
         // const dashboard = this.ownerDocument.createElement('app-loginpage');
         // this.shadowRoot?.appendChild(dashboard);
@@ -25,8 +25,8 @@ class AppContainer extends HTMLElement {
         // const dashboard = this.ownerDocument.createElement('app-registerpage');
         // this.shadowRoot?.appendChild(dashboard);
 
-        // const dashboard = this.ownerDocument.createElement('app-profilepage');
-        // this.shadowRoot?.appendChild(dashboard);
+        const dashboard = this.ownerDocument.createElement('app-profilepage');
+        this.shadowRoot?.appendChild(dashboard);
 
         const css = this.ownerDocument.createElement("style");
         css.innerHTML = styles;
