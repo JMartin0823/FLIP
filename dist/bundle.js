@@ -110,6 +110,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/screens/profilepage.css":
+/*!*************************************!*\
+  !*** ./src/screens/profilepage.css ***!
+  \*************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);\n// Imports\n\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../img/Profile.png */ \"./src/img/Profile.png\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../img/bcklogin.png */ \"./src/img/bcklogin.png\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);\nvar ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".all{\\r\\n    background-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\r\\n    background-repeat: no-repeat;\\r\\n    background-attachment: fixed;\\r\\n    height: 100vh;\\r\\n    width: 100vw;\\r\\n    margin: 0%;\\r\\n    padding: 0%;\\r\\n    overflow-y: hidden;\\r\\n}\\r\\n\\r\\n@media screen and (max-width: 376px){\\r\\n    .all{\\r\\n        background-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_1___ + \");\\r\\n        background-repeat: no-repeat;\\r\\n        background-attachment: fixed;\\r\\n        height: 100vh;\\r\\n        width: 100vw;\\r\\n        margin: 0%;\\r\\n        padding: 0%;\\r\\n        overflow-y: hidden;\\r\\n    }\\r\\n  }\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/screens/profilepage.css?");
+
+/***/ }),
+
 /***/ "./src/screens/registerpage.css":
 /*!**************************************!*\
   !*** ./src/screens/registerpage.css ***!
@@ -186,7 +196,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"About\": () => (/* reexport safe */ _about_about__WEBPACK_IMPORTED_MODULE_0__[\"default\"]),\n/* harmony export */   \"Bottombar\": () => (/* reexport safe */ _bottombar_bottombar__WEBPACK_IMPORTED_MODULE_4__[\"default\"]),\n/* harmony export */   \"Card\": () => (/* reexport safe */ _card_card__WEBPACK_IMPORTED_MODULE_2__[\"default\"]),\n/* harmony export */   \"Searchbar\": () => (/* reexport safe */ _searchbar_searchbar__WEBPACK_IMPORTED_MODULE_1__[\"default\"]),\n/* harmony export */   \"SideB\": () => (/* reexport safe */ _sidebar_sidebar__WEBPACK_IMPORTED_MODULE_3__[\"default\"]),\n/* harmony export */   \"login\": () => (/* reexport safe */ _login_login__WEBPACK_IMPORTED_MODULE_5__[\"default\"]),\n/* harmony export */   \"register\": () => (/* reexport safe */ _register_register__WEBPACK_IMPORTED_MODULE_6__[\"default\"])\n/* harmony export */ });\n/* harmony import */ var _about_about__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./about/about */ \"./src/components/about/about.ts\");\n/* harmony import */ var _searchbar_searchbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./searchbar/searchbar */ \"./src/components/searchbar/searchbar.ts\");\n/* harmony import */ var _card_card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./card/card */ \"./src/components/card/card.ts\");\n/* harmony import */ var _sidebar_sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sidebar/sidebar */ \"./src/components/sidebar/sidebar.ts\");\n/* harmony import */ var _bottombar_bottombar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./bottombar/bottombar */ \"./src/components/bottombar/bottombar.ts\");\n/* harmony import */ var _login_login__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./login/login */ \"./src/components/login/login.ts\");\n/* harmony import */ var _register_register__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./register/register */ \"./src/components/register/register.ts\");\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/components/export.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"About\": () => (/* reexport safe */ _about_about__WEBPACK_IMPORTED_MODULE_0__[\"default\"]),\n/* harmony export */   \"Bottombar\": () => (/* reexport safe */ _bottombar_bottombar__WEBPACK_IMPORTED_MODULE_4__[\"default\"]),\n/* harmony export */   \"Card\": () => (/* reexport safe */ _card_card__WEBPACK_IMPORTED_MODULE_2__[\"default\"]),\n/* harmony export */   \"Searchbar\": () => (/* reexport safe */ _searchbar_searchbar__WEBPACK_IMPORTED_MODULE_1__[\"default\"]),\n/* harmony export */   \"SideB\": () => (/* reexport safe */ _sidebar_sidebar__WEBPACK_IMPORTED_MODULE_3__[\"default\"]),\n/* harmony export */   \"login\": () => (/* reexport safe */ _login_login__WEBPACK_IMPORTED_MODULE_5__[\"default\"]),\n/* harmony export */   \"register\": () => (/* reexport safe */ _register_register__WEBPACK_IMPORTED_MODULE_6__[\"default\"])\n/* harmony export */ });\n/* harmony import */ var _about_about__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./about/about */ \"./src/components/about/about.ts\");\n/* harmony import */ var _searchbar_searchbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./searchbar/searchbar */ \"./src/components/searchbar/searchbar.ts\");\n/* harmony import */ var _card_card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./card/card */ \"./src/components/card/card.ts\");\n/* harmony import */ var _sidebar_sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sidebar/sidebar */ \"./src/components/sidebar/sidebar.ts\");\n/* harmony import */ var _bottombar_bottombar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./bottombar/bottombar */ \"./src/components/bottombar/bottombar.ts\");\n/* harmony import */ var _login_login__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./login/login */ \"./src/components/login/login.ts\");\n/* harmony import */ var _register_register__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./register/register */ \"./src/components/register/register.ts\");\n\n\n\n\n\n\n\n// export {default as PFSidebar} from './pfsidebar/pfsidebar'\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/components/export.ts?");
 
 /***/ }),
 
@@ -236,7 +246,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _screens_homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/homepage */ \"./src/screens/homepage.ts\");\n/* harmony import */ var _screens_loginpage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/loginpage */ \"./src/screens/loginpage.ts\");\n/* harmony import */ var _screens_registerpage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./screens/registerpage */ \"./src/screens/registerpage.ts\");\n/* harmony import */ var _components_export__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/export */ \"./src/components/export.ts\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n\n\n\n\nclass AppContainer extends HTMLElement {\n    constructor() {\n        super();\n        this.attachShadow({ mode: \"open\" });\n    }\n    connectedCallback() {\n        this.render();\n    }\n    render() {\n        var _a, _b;\n        const dashboard = this.ownerDocument.createElement('app-homepage');\n        (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(dashboard);\n        // const dashboard = this.ownerDocument.createElement('app-loginpage');\n        // this.shadowRoot?.appendChild(dashboard);\n        // const dashboard = this.ownerDocument.createElement('app-registerpage');\n        // this.shadowRoot?.appendChild(dashboard);\n        const css = this.ownerDocument.createElement(\"style\");\n        css.innerHTML = _index_css__WEBPACK_IMPORTED_MODULE_4__[\"default\"];\n        (_b = this.shadowRoot) === null || _b === void 0 ? void 0 : _b.appendChild(css);\n    }\n}\ncustomElements.define('app-container', AppContainer);\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _screens_homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/homepage */ \"./src/screens/homepage.ts\");\n/* harmony import */ var _screens_loginpage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/loginpage */ \"./src/screens/loginpage.ts\");\n/* harmony import */ var _screens_registerpage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./screens/registerpage */ \"./src/screens/registerpage.ts\");\n/* harmony import */ var _screens_profilepage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./screens/profilepage */ \"./src/screens/profilepage.ts\");\n/* harmony import */ var _components_export__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/export */ \"./src/components/export.ts\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n\n\n\n\n\nclass AppContainer extends HTMLElement {\n    constructor() {\n        super();\n        this.attachShadow({ mode: \"open\" });\n    }\n    connectedCallback() {\n        this.render();\n    }\n    render() {\n        var _a, _b;\n        const dashboard = this.ownerDocument.createElement('app-homepage');\n        (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(dashboard);\n        // const dashboard = this.ownerDocument.createElement('app-loginpage');\n        // this.shadowRoot?.appendChild(dashboard);\n        // const dashboard = this.ownerDocument.createElement('app-registerpage');\n        // this.shadowRoot?.appendChild(dashboard);\n        // const dashboard = this.ownerDocument.createElement('app-profilepage');\n        // this.shadowRoot?.appendChild(dashboard);\n        const css = this.ownerDocument.createElement(\"style\");\n        css.innerHTML = _index_css__WEBPACK_IMPORTED_MODULE_5__[\"default\"];\n        (_b = this.shadowRoot) === null || _b === void 0 ? void 0 : _b.appendChild(css);\n    }\n}\ncustomElements.define('app-container', AppContainer);\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/index.ts?");
 
 /***/ }),
 
@@ -290,6 +300,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _log
 
 /***/ }),
 
+/***/ "./src/screens/profilepage.ts":
+/*!************************************!*\
+  !*** ./src/screens/profilepage.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _profilepage_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./profilepage.css */ \"./src/screens/profilepage.css\");\n\nclass AppProfile extends HTMLElement {\n    constructor() {\n        super();\n        this.attachShadow({ mode: \"open\" });\n    }\n    connectedCallback() {\n        this.render();\n    }\n    render() {\n        var _a, _b;\n        if (this.shadowRoot) {\n            const login = this.ownerDocument.createElement(\"my-pfsidebar\");\n            const all = this.ownerDocument.createElement(\"section\");\n            all.className = \"all\";\n            all.appendChild(login);\n            (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(all);\n            const css = this.ownerDocument.createElement(\"style\");\n            css.innerHTML = _profilepage_css__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n            (_b = this.shadowRoot) === null || _b === void 0 ? void 0 : _b.appendChild(css);\n        }\n    }\n}\ncustomElements.define(\"app-profilepage\", AppProfile);\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/screens/profilepage.ts?");
+
+/***/ }),
+
 /***/ "./src/screens/registerpage.ts":
 /*!*************************************!*\
   !*** ./src/screens/registerpage.ts ***!
@@ -317,6 +337,16 @@ eval("module.exports = __webpack_require__.p + \"ecaf79cce5cc5a690bce.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"eacf808a1b240bbdd4cc.png\";\n\n//# sourceURL=webpack://dca_scoffolding/./src/img/Background2.png?");
+
+/***/ }),
+
+/***/ "./src/img/Profile.png":
+/*!*****************************!*\
+  !*** ./src/img/Profile.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"7039db817b6d371d03f7.png\";\n\n//# sourceURL=webpack://dca_scoffolding/./src/img/Profile.png?");
 
 /***/ }),
 
@@ -432,10 +462,7 @@ eval("module.exports = __webpack_require__.p + \"8bd1b5bd1928024b7819.png\";\n\n
 /******/ 				scriptUrl = document.currentScript.src;
 /******/ 			if (!scriptUrl) {
 /******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) {
-/******/ 					var i = scripts.length - 1;
-/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
-/******/ 				}
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
 /******/ 			}
 /******/ 		}
 /******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration

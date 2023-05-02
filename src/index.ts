@@ -1,6 +1,7 @@
 import "./screens/homepage"
 import "./screens/loginpage"
 import "./screens/registerpage"
+import "./screens/profilepage"
 import "./components/export"
 import styles from "./index.css"
 
@@ -22,6 +23,9 @@ class AppContainer extends HTMLElement {
         // this.shadowRoot?.appendChild(dashboard);
 
         // const dashboard = this.ownerDocument.createElement('app-registerpage');
+        // this.shadowRoot?.appendChild(dashboard);
+
+        // const dashboard = this.ownerDocument.createElement('app-profilepage');
         // this.shadowRoot?.appendChild(dashboard);
 
         const css = this.ownerDocument.createElement("style");
