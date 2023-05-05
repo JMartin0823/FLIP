@@ -10,14 +10,17 @@ class AppProfile extends HTMLElement {
         }
 
         render() {
-            if (this.shadowRoot) {
-                const login=this.ownerDocument.createElement("my-pfsidebar")
-                this.shadowRoot.innerHTML += `<img src="./img/fliplogo2.png" alt="">`
+            if (this.shadowRoot) {const user = this.ownerDocument.createElement("my-pfuser")
+            const post = this.ownerDocument.createElement("my-pfpost")
+            const login=this.ownerDocument.createElement("my-pfsidebar")
+            this.shadowRoot.innerHTML += `<img src="./img/fliplogo2.png" alt="">`
 
-                const all=this.ownerDocument.createElement("section")
-                all.className="all"
-                all.appendChild(login)
-                this.shadowRoot?.appendChild(all)
+            const all=this.ownerDocument.createElement("section")
+            all.className="all"
+            all.appendChild(login)
+            all.appendChild(user)
+            all.appendChild(post)
+            this.shadowRoot?.appendChild(all)
 
                 const css = this.ownerDocument.createElement("style");
                 css.innerHTML = styles;
@@ -28,4 +31,3 @@ class AppProfile extends HTMLElement {
             }
 
     customElements.define("app-profilepage", AppProfile);
-            
