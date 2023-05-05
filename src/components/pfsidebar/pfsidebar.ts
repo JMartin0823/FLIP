@@ -1,3 +1,6 @@
+import { dispatch } from '../../store';
+import { navigate } from '../../store/actions';
+import { Screens } from '../../types/store';
 import styles from './pfsidebar.css'
 class PFSidebar extends HTMLElement {
 
