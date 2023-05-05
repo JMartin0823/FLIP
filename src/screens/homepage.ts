@@ -5,12 +5,10 @@ import data4 from "../mocks/data4";
 import styles from "./homepage.css"
 import About, { Attribute } from "../components/about/about";
 import Card, { Attribut } from "../components/card/card";
-import Sidebar, { Attribu } from "../components/sidebar/sidebar";
 
 class AppHomePage extends HTMLElement {
     AboutS: About[] = [];
     CardS: Card[] = [];
-    SideB: Sidebar[] = [];
 
     constructor() {
         super();
@@ -39,13 +37,6 @@ class AppHomePage extends HTMLElement {
                     this.CardS.push(sectionCard);
                 });
 
-                dataSidebar.forEach((user:any) => {
-                const sectionBar = this.ownerDocument.createElement(
-                    "my-sidebar"
-                    ) as Sidebar;
-                    sectionBar.setAttribute(Attribu.name, user.name);
-                    this.SideB.push(sectionBar);
-                });
         }
 
         connectedCallback() {
@@ -74,13 +65,12 @@ class AppHomePage extends HTMLElement {
                    sectionCard.appendChild(ab);
                   });
 
-                  
-                  const sectionBar=this.ownerDocument.createElement("section")
-                  sectionBar.className="BarSection"
-                  this.SideB.forEach((ab) => {
-                     sectionBar.appendChild(ab);
-                    });
+                  const sectionBar=this.ownerDocument.createElement("my-sidebar")
 
+                  const sidebar=this.ownerDocument.createElement("my-sidebar")
+                  sectionBar.className="BarSection"
+
+                  sectionBar.appendChild(sidebar)
 
 
                 const all=this.ownerDocument.createElement("section")

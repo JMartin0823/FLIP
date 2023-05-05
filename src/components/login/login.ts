@@ -1,3 +1,7 @@
+import { dispatch } from '../../store';
+import { navigate } from '../../store/actions';
+import { Screens } from '../../types/store';
+import { login } from '../export';
 import styles from './login.css'
 class Login extends HTMLElement {
 
@@ -12,24 +16,58 @@ class Login extends HTMLElement {
 
         render() {
             if (this.shadowRoot) {
-                this.shadowRoot.innerHTML = `
-                <section class="all">
-                <h1>Login to your account</h1>
-                <section class="two">
-                <section class="one">
-    <form action="" class="email">
-        <input type="text" placeholder="Email" class="emailbar">
-    </form>
-    <form action="" class="password">
-        <input type="text" placeholder="Password" class="passbar">
-    </form></section>
-    <button class="signin">Sign in</button>
-</section>
-                <h2>New here?</h2>
-                <p>Let’s Wow your online presence</p>
-                <button class="register">Register</button>
-                </section>
-                `;
+                this.shadowRoot.innerHTML = ``;
+
+                const all = this.ownerDocument.createElement("section")
+                all.className = "all"
+
+                const header = this.ownerDocument.createElement("h1")
+                header.textContent="Login to your account"
+
+                const two = this.ownerDocument.createElement("section")
+                two.className = "two"
+
+                const one = this.ownerDocument.createElement("section")
+                one.className = "one"
+
+                const input1 = this.ownerDocument.createElement("input")
+                input1.className = "emailbar"
+                input1.placeholder="Email"
+
+                const input2 = this.ownerDocument.createElement("input")
+                input2.className = "passbar"
+                input2.placeholder="Password"
+
+                const login = this.ownerDocument.createElement("button")
+                login.className = "signin"
+                login.textContent="Sign in"
+                login.addEventListener("click", () =>{
+                    dispatch(navigate(Screens.HOMEPAGE))
+                } )
+
+                const header2 = this.ownerDocument.createElement("h2")
+                header2.textContent="New here?"
+
+                const text = this.ownerDocument.createElement("p")
+                text.textContent="Let’s Wow your online presence"
+
+                const register = this.ownerDocument.createElement("button")
+                register.className = "register"
+                register.textContent="Register"
+
+                all.appendChild(header)
+                all.appendChild(two)
+                two.appendChild(one)
+                one.appendChild(input1)
+                one.appendChild(input2)
+                two.appendChild(login)
+                all.appendChild(header2)
+                all.appendChild(text)
+                all.appendChild(register)
+
+                this.shadowRoot.appendChild(all)
+                
+
                 const css = this.ownerDocument.createElement("style");
                 css.innerHTML = styles;
                 this.shadowRoot?.appendChild(css);

@@ -55,6 +55,8 @@ h2 {
 .one{
     position: absolute;
     margin-bottom: 20%;
+    max-width: 30%;
+    left: 36.5%;
 }
 
 .email,
@@ -68,7 +70,7 @@ h2 {
   padding: 10px;
   border: transparent;
   border-radius: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 27px;
   background-color: #D9D9D9; 
   height: 1cm;
   width: 13cm;
@@ -214,11 +216,12 @@ h2 {
     .one{
         position: absolute;
         margin-bottom: 45.5%;
+        left: 17.5%;
     }
     
     .email,
     .password {
-      margin-bottom: 10px; 
+      margin-bottom: 20px; 
       
     }
     .emailbar,
@@ -227,7 +230,7 @@ h2 {
       padding: 10px;
       border: transparent;
       border-radius: 16px;
-      margin-bottom: 1%;
+      margin-bottom: 12%;
       background-color: #D9D9D9; 
       height: 0.4cm;
       width: 6cm;

@@ -1,25 +1,23 @@
-import {LogInInfo, User, UserWithPassword} from "./users"
-import {Post} from "./posts";
+export type Observer = { render: () => void } & HTMLElement;
+
+export enum Screens {
+  LOGIN = "LOGIN",
+  REGISTER = "REGISTER",
+  HOMEPAGE = "HOMEPAGE",
+  PROFILE = "PROFILE",
+}
 
 export type AppState = {
-    user: User | null,
-    posts: Post[]
+  screen: Screens;
+};
+
+export enum NavigationActions {
+  "NAVIGATE" = "NAVIGATE",
 }
 
-export type Observer = ({ render: () => void } & HTMLElement);
-
-// ACTIONS
-
-export enum AuthActions {
-    "LOGIN" = "LOGIN",
-    "LOGOUT" = "LOGOUT",
+export interface NavigateAction {
+  action: NavigationActions.NAVIGATE;
+  payload: Screens;
 }
 
-// INTERFACES
-
-export interface LogInAction {
-    action: AuthActions.LOGIN,
-    payload: User
-}
-
-export type Actions = LogInAction;
+export type Actions = NavigateAction;

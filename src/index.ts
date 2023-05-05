@@ -4,11 +4,14 @@ import "./screens/registerpage"
 import "./screens/profilepage"
 import "./components/export"
 import styles from "./index.css"
+import { Screens } from "./types/store"
+import { addObserver, appState } from "./store"
 
 class AppContainer extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({mode: "open"})
+        addObserver(this)
     }
 
     connectedCallback() {
@@ -16,17 +19,34 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        // const dashboard = this.ownerDocument.createElement('app-homepage');
-        // this.shadowRoot?.appendChild(dashboard);
+        if(this.shadowRoot)this.shadowRoot.innerHTML='';
+        switch (appState.screen) {
+            case Screens.HOMEPAGE:
+                const homepage = this.ownerDocument.createElement('app-homepage');
+                this.shadowRoot?.appendChild(homepage);
+                break;
 
-        // const dashboard = this.ownerDocument.createElement('app-loginpage');
-        // this.shadowRoot?.appendChild(dashboard);
+                case Screens.LOGIN:
+                const login = this.ownerDocument.createElement('app-loginpage');
+                this.shadowRoot?.appendChild(login);
 
-        // const dashboard = this.ownerDocument.createElement('app-registerpage');
-        // this.shadowRoot?.appendChild(dashboard);
+                break;
 
-        const dashboard = this.ownerDocument.createElement('app-profilepage');
-        this.shadowRoot?.appendChild(dashboard);
+                 case Screens.REGISTER:
+                const searchbar = this.ownerDocument.createElement('app-registerpage');
+                this.shadowRoot?.appendChild(searchbar);
+
+                break;
+
+                 case Screens.PROFILE:
+                const profile = this.ownerDocument.createElement('app-profilepage');
+                this.shadowRoot?.appendChild(profile);
+
+                break;
+
+            default:
+                break;
+        }
 
         const css = this.ownerDocument.createElement("style");
         css.innerHTML = styles;

@@ -1,17 +1,9 @@
+import { dispatch } from "../../store";
+import { navigate } from "../../store/actions";
+import { Screens } from "../../types/store";
 import styles from "./sidebar.css"
-export enum Attribu {
-    "name" = "name",
-}
 
 class Sidebar extends HTMLElement {
-    name?: string;
-
-    static get observedAttributes() {
-        const attrs: Record<Attribu, null> = {
-            name: null,
-        };
-        return Object.keys(attrs);
-    }
 
     constructor() {
         super();
@@ -22,28 +14,49 @@ class Sidebar extends HTMLElement {
         this.render();
     }
 
-    attributeChangedCallback(
-        propName: Attribu,
-        _: string | undefined,
-        newValue: string | undefined
-        ) {
-            switch (propName) {
-                default:
-                this[propName] = newValue;
-                break;
-            }
-
-            this.render();
-        }
-
         render() {
             if (this.shadowRoot) {
-                this.shadowRoot.innerHTML = `
-                <link rel="stylesheet" href="./sidebar.css">
-                <section>
-                <Button>${this.name}</Button>
-                </section>
-                `;
+                this.shadowRoot.innerHTML = ``;
+
+                const section=this.ownerDocument.createElement("section")
+                section.className="all"
+
+                const Explore = this.ownerDocument.createElement("button")
+                Explore.className = "button"
+                Explore.textContent="Explore"
+
+                const Notifications = this.ownerDocument.createElement("button")
+                Notifications.className = "button"
+                Notifications.textContent="Notifications"
+
+                const Messages = this.ownerDocument.createElement("button")
+                Messages.className = "button"
+                Messages.textContent="Messages"
+
+                const Bookmarks = this.ownerDocument.createElement("button")
+                Bookmarks.className = "button"
+                Bookmarks.textContent="Bookmarks"
+
+                const Profile = this.ownerDocument.createElement("button")
+                Profile.className = "button"
+                Profile.textContent="Profile"
+                Profile.addEventListener("click", () =>{
+                    dispatch(navigate(Screens.LOGIN))
+                } )
+
+                const More = this.ownerDocument.createElement("button")
+                More.className = "button"
+                More.textContent="More"
+
+                section.appendChild(Explore)
+                section.appendChild(Notifications)
+                section.appendChild(Messages)
+                section.appendChild(Bookmarks)
+                section.appendChild(Profile)
+                section.appendChild(More)
+
+                this.shadowRoot.appendChild(section)
+
                 const css = this.ownerDocument.createElement("style");
             css.innerHTML = styles;
             this.shadowRoot?.appendChild(css);

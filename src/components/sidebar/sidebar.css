@@ -1,3 +1,15 @@
+.all{
+    background-color: transparent;
+    border: transparent;
+    border-radius: 25px;
+    padding-top: 0px; 
+    margin-top: 176px;
+    margin-right: 1025px;
+    position: fixed;
+    top: 9px;
+    max-width: 2cm;
+}
+
 button{
  appearance: none;
  background-color: transparent;
