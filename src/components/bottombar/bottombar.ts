@@ -52,11 +52,17 @@ class Bottombar extends HTMLElement {
                 dispatch(navigate(Screens.PROFILE));
             });}
 
-        //     const home = this.shadowRoot.querySelector(".b2");
-        // if (home) {
-        //     home.addEventListener("click", () => {
-        //         dispatch(navigate(Screens.HOMEPAGE));
-        //     });}
+            const More = this.shadowRoot.querySelector(".b1");
+        if (More) {
+            More.addEventListener("click", () => {
+                dispatch(navigate(Screens.LOGIN));
+            });}
+
+            const home = this.shadowRoot.querySelector(".b2");
+        if (home) {
+            home.addEventListener("click", () => {
+                dispatch(navigate(Screens.HOMEPAGE));
+            });}
                 
                 const css = this.ownerDocument.createElement("style");
             css.innerHTML = styles;

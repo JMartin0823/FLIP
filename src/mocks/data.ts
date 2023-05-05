@@ -24,7 +24,7 @@ const dataCard = [
     {
         name: "Chiakiro",
         username: "@ChiakiroArt",
-        profile: "https://pbs.twimg.com/profile_images/1614543010397560833/IXfL6OpK_400x400.jpg",
+        profile: "https://pbs.twimg.com/profile_images/1264798696828518400/8oESKMs5_400x400.jpg",
         image: "https://pbs.twimg.com/media/Frry33kWIAgYf2A?format=jpg&name=medium",
         image2: "https://img.icons8.com/windows/512/hearts.png",
         image3: "https://cdn-icons-png.flaticon.com/512/1388/1388895.png",

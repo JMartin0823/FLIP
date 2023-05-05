@@ -13,11 +13,13 @@ class PFPost extends HTMLElement {
         render() {
             if (this.shadowRoot) {
                 this.shadowRoot.innerHTML = `
-                <section>
-                <img  class="primera" src="" alt="">
-                <img class="segunda" src="" alt="">
-                <img class="tercera" src="" alt="">
-
+                <section class="posts">
+                <img src="../../src/img/feid1.JPG" alt="">
+                <img src="../../src/img/feid2.JPG" alt="">
+                <img src="../../src/img/feid3.JPG" alt="">
+                <img src="../../src/img/feid4.JPG" alt="">
+                <img src="../../src/img/feid5.JPG" alt="">
+                <img src="../../src/img/feid6.JPG" alt="">
                 </section>
                 `;
                 const css = this.ownerDocument.createElement("style");

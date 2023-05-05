@@ -2,7 +2,7 @@
     display: none;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 390px){
     .b1, .b2, .b3, .b4{
         color: #FD6542;
         display: contents;
@@ -11,16 +11,6 @@
 }
 
 
-/* .profile{
-        color: #FD6542;
-        display: contents;
-        fill: #FD6542;
-        padding: 3%;
-        z-index: 1;
-        left: 30%;
-    
-} */
-
     section{
         background-color: #1E2454;
         position: fixed;
@@ -28,6 +18,8 @@
         width: 100%;
         top: 90%;
         z-index: 1;
+        overflow-y: hidden;
+        overflow-x: hidden;
         
     }
     .section{

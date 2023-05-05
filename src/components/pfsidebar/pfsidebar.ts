@@ -15,7 +15,7 @@ class PFSidebar extends HTMLElement {
 
         render() {
             if (this.shadowRoot) {
-                this.shadowRoot.innerHTML = ``;
+                this.shadowRoot.innerHTML = `<img class="img1" src="../../src/img/fliplogo2.png" alt="">`;
                 const section=this.ownerDocument.createElement("section")
                 section.className="section"
 
@@ -50,8 +50,6 @@ class PFSidebar extends HTMLElement {
                 Privacy.className = "button"
                 Privacy.textContent="Privacy and security"
 
-
-
                 section.appendChild(Back)
                 section.appendChild(Edit)
                 section.appendChild(Change)
@@ -59,6 +57,8 @@ class PFSidebar extends HTMLElement {
                 section.appendChild(Push)
                 section.appendChild(Manage)
                 section.appendChild(Privacy)
+
+                this.shadowRoot.appendChild(section)
 
                 const css = this.ownerDocument.createElement("style");
                 css.innerHTML = styles;

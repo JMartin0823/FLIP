@@ -9,9 +9,9 @@
     overflow-y: hidden;
 }
 
-@media screen and (max-width: 376px){
+@media screen and (max-width: 390px){
     .all{
-        background-image: url("../img/bcklogin.png");
+        background-image: url("../img/bcklogin2.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         height: 100vh;

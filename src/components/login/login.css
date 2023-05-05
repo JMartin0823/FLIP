@@ -163,18 +163,19 @@ h2 {
     box-shadow: none;
    }
 
-   @media screen and (max-width: 400px){
+   @media screen and (max-width: 390px){
+    
     h1 {
-        font-family: 'proxima-nova', sans-serif;
-        font-weight: bold;
-        font-size: 30px;
-        display: flex;
-        width: 60%;
-        position: relative;
-        left: 17%;
-        top: 26%;
-        text-align: center;
-        color: #333333;
+      font-family: 'proxima-nova', sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      display: flex;
+      width: 60%;
+      position: relative;
+      left: 16%;
+      top: 24%;
+      text-align: center;
+      color: #333333;
       }
 
       h2 {
@@ -208,7 +209,7 @@ h2 {
         flex-direction: column;
         position: relative;
         right: 3%;
-        top: 39%;
+        top: 37%;
         align-items: center; 
         justify-content: center; 
       }
@@ -237,31 +238,34 @@ h2 {
     }
 
     .signin{
-        appearance: none;
-        background-color: #FD6542;
-        border: transparent;
-        border-radius: 29px;
-        color: white;
-        cursor: pointer;
-        display: inline-block;
-        text-align: center;
-        font-family: 'Futura';
-        font-size: 13px;
-        font-weight: bold;
-        line-height: normal;
-        margin: 0;
-        min-height: 0;
-        min-width: 0;
-        outline: none;
-        margin: 2mm;
-        padding: 4mm;
-        text-decoration: none;
-        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        will-change: transform;
-        width:50%;
+      appearance: none;
+      background-color: #FD6542;
+      border: transparent;
+      border-radius: 29px;
+      color: white;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      font-family: 'Futura';
+      font-size: 13px;
+      font-weight: bold;
+      line-height: normal;
+      margin: 0;
+      min-height: 0;
+      min-width: 0;
+      outline: none;
+      margin: 2mm;
+      padding: 4mm;
+      text-decoration: none;
+      transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      will-change: transform;
+      width: 40%;
+      position: relative;
+      left: -1%;
+      top: -39%;
        }
 
        .register{
@@ -290,9 +294,9 @@ h2 {
         -webkit-user-select: none;
         touch-action: manipulation;
         will-change: transform;
-        width:50%;
+        width:40%;
         position: relative;
-        left: 20.5%;
-        top: 40%;
+        left: 24%;
+        top: 39%;
        }
   }

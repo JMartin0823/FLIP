@@ -47,6 +47,9 @@ class Sidebar extends HTMLElement {
                 const More = this.ownerDocument.createElement("button")
                 More.className = "button"
                 More.textContent="More"
+                More.addEventListener("click", () =>{
+                    dispatch(navigate(Screens.LOGIN))
+                } )
 
                 section.appendChild(Explore)
                 section.appendChild(Notifications)

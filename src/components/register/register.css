@@ -163,7 +163,7 @@ h2 {
     box-shadow: none;
    }
 
-   @media screen and (max-width: 400px){
+   @media screen and (max-width: 390px){
     h1 {
         font-family: 'proxima-nova', sans-serif;
         font-weight: bold;
@@ -171,8 +171,8 @@ h2 {
         display: flex;
         width: 60%;
         position: relative;
-        left: 17%;
-        top: 26%;
+        left: 16%;
+        top: 24%;
         text-align: center;
         color: #333333;
       }
@@ -208,7 +208,7 @@ h2 {
         flex-direction: column;
         position: relative;
         right: 3%;
-        top: 39%;
+        top: 37%;
         align-items: center; 
         justify-content: center; 
       }
@@ -221,7 +221,7 @@ h2 {
     
     .email,
     .password {
-      margin-bottom: 20px; 
+      margin-bottom: 15px; 
       
     }
     .emailbar,
@@ -261,7 +261,10 @@ h2 {
         -webkit-user-select: none;
         touch-action: manipulation;
         will-change: transform;
-        width:50%;
+        width: 40%;
+        position: relative;
+        left: -1%;
+        top: -39%;
        }
 
        .register{
@@ -290,9 +293,9 @@ h2 {
         -webkit-user-select: none;
         touch-action: manipulation;
         will-change: transform;
-        width:50%;
+        width:40%;
         position: relative;
-        left: 20.5%;
-        top: 40%;
+        left: 24%;
+        top: 39%;
        }
   }
