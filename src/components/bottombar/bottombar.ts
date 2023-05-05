@@ -46,43 +46,18 @@ class Bottombar extends HTMLElement {
             </section>
                 `;
 
+                const profile = this.shadowRoot.querySelector(".b4");
+        if (profile) {
+            profile.addEventListener("click", () => {
+                dispatch(navigate(Screens.PROFILE));
+            });}
+
+        //     const home = this.shadowRoot.querySelector(".b2");
+        // if (home) {
+        //     home.addEventListener("click", () => {
+        //         dispatch(navigate(Screens.HOMEPAGE));
+        //     });}
                 
-                // const profile = this.ownerDocument.createElement("button");
-                // profile.className = "profile";
-                // const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-                // svg.setAttribute("class", "icon icon-tabler icon-tabler-user");
-                // svg.setAttribute("width", "30");
-                // svg.setAttribute("height", "30");
-                // svg.setAttribute("viewBox", "0 0 24 24");
-                // svg.setAttribute("stroke-width", "2");
-                // svg.setAttribute("stroke", "currentColor");
-                // svg.setAttribute("fill", "currentColor");
-                // svg.setAttribute("stroke-linecap", "round");
-                // svg.setAttribute("stroke-linejoin", "round");
-
-                // const path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-                // path1.setAttribute("stroke", "none");
-                // path1.setAttribute("d", "M0 0h24v24H0z");
-                // path1.setAttribute("fill", "none");
-
-                // const path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-                // path2.setAttribute("d", "M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0");
-
-                // const path3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-                // path3.setAttribute("d", "M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2");
-
-                // svg.appendChild(path1);
-                // svg.appendChild(path2);
-                // svg.appendChild(path3);
-
-                // profile.appendChild(svg);
-
-                // profile.addEventListener("click", () =>{
-                //     dispatch(navigate(Screens.PROFILE))
-                // } )
-
-                // this.shadowRoot.appendChild(profile)
-
                 const css = this.ownerDocument.createElement("style");
             css.innerHTML = styles;
             this.shadowRoot?.appendChild(css);
