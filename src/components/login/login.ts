@@ -54,6 +54,9 @@ class Login extends HTMLElement {
                 const register = this.ownerDocument.createElement("button")
                 register.className = "register"
                 register.textContent="Register"
+                register.addEventListener("click", () =>{
+                    dispatch(navigate(Screens.REGISTER))
+                } )
 
                 all.appendChild(header)
                 all.appendChild(two)

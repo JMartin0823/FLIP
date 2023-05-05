@@ -1,3 +1,6 @@
+import { dispatch } from '../../store';
+import { navigate } from '../../store/actions';
+import { Screens } from '../../types/store';
 import styles from './register.css'
 class Register extends HTMLElement {
 
@@ -12,24 +15,57 @@ class Register extends HTMLElement {
 
         render() {
             if (this.shadowRoot) {
-                this.shadowRoot.innerHTML = `
-                <section class="all">
-                <h1>Create an account</h1>
-                <section class="two">
-                <section class="one">
-    <form action="" class="email">
-        <input type="text" placeholder="Username" class="emailbar">
-    </form>
-    <form action="" class="password">
-        <input type="text" placeholder="Password" class="passbar">
-    </form></section>
-    <button class="signin">Create</button>
-</section>
-                <h2>Done yet?</h2>
-                <p>Yes, my account is created!</p>
-                <button class="register">Sign in</button>
-                </section>
-                `;
+                this.shadowRoot.innerHTML = ``;
+
+                const all = this.ownerDocument.createElement("section")
+                all.className = "all"
+
+                const header = this.ownerDocument.createElement("h1")
+                header.textContent="Create an account"
+
+                const two = this.ownerDocument.createElement("section")
+                two.className = "two"
+
+                const one = this.ownerDocument.createElement("section")
+                one.className = "one"
+
+                const input1 = this.ownerDocument.createElement("input")
+                input1.className = "emailbar"
+                input1.placeholder="Username"
+
+                const input2 = this.ownerDocument.createElement("input")
+                input2.className = "passbar"
+                input2.placeholder="Password"
+
+                const login = this.ownerDocument.createElement("button")
+                login.className = "signin"
+                login.textContent="Create"
+
+                const header2 = this.ownerDocument.createElement("h2")
+                header2.textContent="Done yet?"
+
+                const text = this.ownerDocument.createElement("p")
+                text.textContent="Yes, my account is created!"
+
+                const register = this.ownerDocument.createElement("button")
+                register.className = "register"
+                register.textContent="Sign in"
+                register.addEventListener("click", () =>{
+                    dispatch(navigate(Screens.LOGIN))
+                } )
+
+                all.appendChild(header)
+                all.appendChild(two)
+                two.appendChild(one)
+                one.appendChild(input1)
+                one.appendChild(input2)
+                two.appendChild(login)
+                all.appendChild(header2)
+                all.appendChild(text)
+                all.appendChild(register)
+
+                this.shadowRoot.appendChild(all)
+
                 const css = this.ownerDocument.createElement("style");
                 css.innerHTML = styles;
                 this.shadowRoot?.appendChild(css);
