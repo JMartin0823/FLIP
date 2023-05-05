@@ -1,0 +1,32 @@
+.primera{
+
+    position: absolute;
+    width: 283px;
+    height: 283px;
+    left: 805px;
+    top: 519px;
+
+    background: url(../../img/post.png);
+    }
+
+    .segunda{
+
+        position: absolute;
+        width: 283px;
+        height: 283px;
+        left: 1187px;
+        top: 519px;
+
+        background: url(../../img/post.png);
+    }
+
+    .tercera{
+
+        position: absolute;
+        width: 283px;
+        height: 283px;
+        left: 1556px;
+        top: 519px;
+
+        background: url(../../img/post.png);
+    }
