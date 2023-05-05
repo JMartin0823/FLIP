@@ -1,3 +1,6 @@
+import { dispatch } from "../../store";
+import { navigate } from "../../store/actions";
+import { Screens } from "../../types/store";
 import styles from "./bottombar.css"
 
 class Bottombar extends HTMLElement {
@@ -29,11 +32,11 @@ class Bottombar extends HTMLElement {
             <path d="M11 4l-4 16"></path>
             <path d="M17 4l-4 16"></path>
          </svg></button>
-            <button class="b4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+         <button class="b4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
             <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
-         </svg></button>
+         </svg></button> 
          <button class="b1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
@@ -42,6 +45,44 @@ class Bottombar extends HTMLElement {
          </svg></button>
             </section>
                 `;
+
+                
+                // const profile = this.ownerDocument.createElement("button");
+                // profile.className = "profile";
+                // const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                // svg.setAttribute("class", "icon icon-tabler icon-tabler-user");
+                // svg.setAttribute("width", "30");
+                // svg.setAttribute("height", "30");
+                // svg.setAttribute("viewBox", "0 0 24 24");
+                // svg.setAttribute("stroke-width", "2");
+                // svg.setAttribute("stroke", "currentColor");
+                // svg.setAttribute("fill", "currentColor");
+                // svg.setAttribute("stroke-linecap", "round");
+                // svg.setAttribute("stroke-linejoin", "round");
+
+                // const path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                // path1.setAttribute("stroke", "none");
+                // path1.setAttribute("d", "M0 0h24v24H0z");
+                // path1.setAttribute("fill", "none");
+
+                // const path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                // path2.setAttribute("d", "M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0");
+
+                // const path3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                // path3.setAttribute("d", "M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2");
+
+                // svg.appendChild(path1);
+                // svg.appendChild(path2);
+                // svg.appendChild(path3);
+
+                // profile.appendChild(svg);
+
+                // profile.addEventListener("click", () =>{
+                //     dispatch(navigate(Screens.PROFILE))
+                // } )
+
+                // this.shadowRoot.appendChild(profile)
+
                 const css = this.ownerDocument.createElement("style");
             css.innerHTML = styles;
             this.shadowRoot?.appendChild(css);
