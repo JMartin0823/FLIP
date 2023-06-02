@@ -29,6 +29,9 @@ class PFSidebar extends HTMLElement {
                 const Edit = this.ownerDocument.createElement("button")
                 Edit.className = "button"
                 Edit.textContent="Edit profile"
+                Edit.addEventListener("click", () =>{
+                    dispatch(navigate(Screens.EDITPROFILE))
+                } )
 
                 const Change = this.ownerDocument.createElement("button")
                 Change.className = "button"

@@ -2,6 +2,7 @@ import "./screens/homepage"
 import "./screens/loginpage"
 import "./screens/registerpage"
 import "./screens/profilepage"
+import "./screens/editprofile"
 import "./components/export"
 import styles from "./index.css"
 import { Screens } from "./types/store"
@@ -41,6 +42,12 @@ class AppContainer extends HTMLElement {
                  case Screens.PROFILE:
                 const profile = this.ownerDocument.createElement('app-profilepage');
                 this.shadowRoot?.appendChild(profile);
+
+                break;
+
+                case Screens.EDITPROFILE:
+                const editprofile = this.ownerDocument.createElement('app-editprofile');
+                this.shadowRoot?.appendChild(editprofile);
 
                 break;
 

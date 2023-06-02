@@ -5,6 +5,7 @@ export enum Screens {
   REGISTER = "REGISTER",
   HOMEPAGE = "HOMEPAGE",
   PROFILE = "PROFILE",
+  EDITPROFILE = "EDITPROFILE",
 }
 
 export type AppState = {
