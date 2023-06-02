@@ -5,6 +5,9 @@ import data4 from "../mocks/data4";
 import styles from "./homepage.css"
 import About, { Attribute } from "../components/about/about";
 import Card, { Attribut } from "../components/card/card";
+import { dispatch } from "../store";
+import { navigate } from "../store/actions";
+import { Screens } from "../types/store";
 
 class AppHomePage extends HTMLElement {
     AboutS: About[] = [];
@@ -50,7 +53,12 @@ class AppHomePage extends HTMLElement {
                 this.shadowRoot.innerHTML += `<my-search></my-search>`;
                 this.shadowRoot.innerHTML += `<my-bottom></my-bottom>`;
                 this.shadowRoot.innerHTML += `<a href="index.html"><img src="../../src/img/fliplogo.png" alt=""></a>`;
-                this.shadowRoot.innerHTML += `<button>Post</button>`;
+
+                const post = this.ownerDocument.createElement("button")
+                post.textContent="Post"
+                post.addEventListener("click", () =>{
+                    dispatch(navigate(Screens.CREATE))
+                } )
 
                 const aboutSection=this.ownerDocument.createElement("section")
                 aboutSection.className="aboutSection"
@@ -75,6 +83,7 @@ class AppHomePage extends HTMLElement {
 
                 const all=this.ownerDocument.createElement("section")
                 all.className="all"
+                all.appendChild(post)
                 all.appendChild(aboutSection)
                 all.appendChild(sectionCard)
                 all.appendChild(sectionBar)

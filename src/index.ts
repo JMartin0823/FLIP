@@ -51,6 +51,12 @@ class AppContainer extends HTMLElement {
 
                 break;
 
+                case Screens.EDITPROFILE:
+                    const createpost = this.ownerDocument.createElement('app-create');
+                    this.shadowRoot?.appendChild(createpost);
+    
+                    break;
+
             default:
                 break;
         }

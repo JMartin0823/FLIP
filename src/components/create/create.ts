@@ -1,12 +1,8 @@
 import { dispatch } from '../../store';
 import { navigate } from '../../store/actions';
 import { Screens } from '../../types/store';
-import styles from './register.css'
-import Firebase from "../../utils/firebase";
-
-const credentials = { email: "", password: "" };
-
-class Register extends HTMLElement {
+import styles from './create.css'
+class Create extends HTMLElement {
 
     constructor() {
         super();
@@ -17,10 +13,6 @@ class Register extends HTMLElement {
         this.render();
     }
 
-    async handleLoginButton() {
-        Firebase.registerUser(credentials);
-      }
-
         render() {
             if (this.shadowRoot) {
                 this.shadowRoot.innerHTML = ``;
@@ -29,7 +21,7 @@ class Register extends HTMLElement {
                 all.className = "all"
 
                 const header = this.ownerDocument.createElement("h1")
-                header.textContent="Create an account"
+                header.textContent="New post"
 
                 const two = this.ownerDocument.createElement("section")
                 two.className = "two"
@@ -37,46 +29,33 @@ class Register extends HTMLElement {
                 const one = this.ownerDocument.createElement("section")
                 one.className = "one"
 
-                const input1 = this.ownerDocument.createElement("input")
-                input1.className = "emailbar"
-                input1.placeholder="Email"
-                input1.type = "email";
-                input1.addEventListener(
-                "change",
-                (e: any) => (credentials.email = e.target.value)
-                )
-
                 const input2 = this.ownerDocument.createElement("input")
                 input2.className = "passbar"
-                input2.placeholder="Password"
-                input2.type = "password";
-                input2.addEventListener(
-                "change",
-                (e: any) => (credentials.password = e.target.value)
-                )
+                input2.placeholder="Caption"
 
                 const login = this.ownerDocument.createElement("button")
                 login.className = "signin"
-                login.textContent="Create"
-                login.addEventListener("click", this.handleLoginButton)
+                login.textContent="Post"
+                login.addEventListener("click", () =>{
+                    dispatch(navigate(Screens.HOMEPAGE))
+                } )
 
                 const header2 = this.ownerDocument.createElement("h2")
-                header2.textContent="Done yet?"
+                header2.textContent="Select files"
 
                 const text = this.ownerDocument.createElement("p")
-                text.textContent="Yes, my account is created!"
+                text.textContent="Great Choice!"
 
                 const register = this.ownerDocument.createElement("button")
                 register.className = "register"
-                register.textContent="Sign in"
+                register.textContent="Upload"
                 register.addEventListener("click", () =>{
-                    dispatch(navigate(Screens.LOGIN))
+                    dispatch(navigate(Screens.REGISTER))
                 } )
 
                 all.appendChild(header)
                 all.appendChild(two)
                 two.appendChild(one)
-                one.appendChild(input1)
                 one.appendChild(input2)
                 two.appendChild(login)
                 all.appendChild(header2)
@@ -84,6 +63,7 @@ class Register extends HTMLElement {
                 all.appendChild(register)
 
                 this.shadowRoot.appendChild(all)
+                
 
                 const css = this.ownerDocument.createElement("style");
                 css.innerHTML = styles;
@@ -92,5 +72,5 @@ class Register extends HTMLElement {
         }
     }
 
-    customElements.define("my-register", Register);
-    export default Register;
+    customElements.define("my-create", Create);
+    export default Create;

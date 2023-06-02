@@ -1,3 +1,6 @@
+import { Post } from "./posts";
+import { User } from "./user";
+
 export type Observer = { render: () => void } & HTMLElement;
 
 export enum Screens {
@@ -6,10 +9,13 @@ export enum Screens {
   HOMEPAGE = "HOMEPAGE",
   PROFILE = "PROFILE",
   EDITPROFILE = "EDITPROFILE",
+  CREATE = "CREATE",
 }
 
 export type AppState = {
   screen: Screens;
+  user: User;
+  posts: Post[];
 };
 
 export enum NavigationActions {

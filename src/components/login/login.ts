@@ -1,8 +1,12 @@
-import { dispatch } from '../../store';
+import { appState, dispatch } from '../../store';
 import { navigate } from '../../store/actions';
 import { Screens } from '../../types/store';
+import Firebase from '../../utils/firebase';
 import { login } from '../export';
 import styles from './login.css'
+
+const credentials = { email: "", password: "" };
+
 class Login extends HTMLElement {
 
     constructor() {
@@ -13,6 +17,27 @@ class Login extends HTMLElement {
     connectedCallback() {
         this.render();
     }
+
+    async handleLoginButton() {
+        Firebase.loginUser(credentials);
+      }
+
+      async validateCredentials() {
+        if (credentials.email === '' || credentials.password === '') {
+          window.alert('Please enter both email and password.');
+        } else {
+          try {
+            await Firebase.loginUser(credentials);
+            if (appState.user !== null) {
+              dispatch(navigate(Screens.HOMEPAGE));
+            } else {
+              window.alert('Invalid credentials. Please try again.');
+            }
+          } catch (error) {
+            window.alert('Invalid credentials. Please try again.');
+          }
+        }
+      }
 
         render() {
             if (this.shadowRoot) {
@@ -33,17 +58,27 @@ class Login extends HTMLElement {
                 const input1 = this.ownerDocument.createElement("input")
                 input1.className = "emailbar"
                 input1.placeholder="Email"
+                input1.type = "email"
+                input1.addEventListener(
+                    "change",
+                    (e: any) => (credentials.email = e.target.value)
+                  );
 
                 const input2 = this.ownerDocument.createElement("input")
                 input2.className = "passbar"
                 input2.placeholder="Password"
+                input2.type = "password";
+                input2.addEventListener(
+                "change",
+                (e: any) => (credentials.password = e.target.value)
+                );
 
                 const login = this.ownerDocument.createElement("button")
                 login.className = "signin"
                 login.textContent="Sign in"
-                login.addEventListener("click", () =>{
-                    dispatch(navigate(Screens.HOMEPAGE))
-                } )
+                login.addEventListener("click", this.validateCredentials)
+                login.addEventListener("click", this.handleLoginButton)
+
 
                 const header2 = this.ownerDocument.createElement("h2")
                 header2.textContent="New here?"

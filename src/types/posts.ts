@@ -1,15 +1,10 @@
 export interface Comment {
-    ownerUserId: number,
+    ownerUserId: string,
     ownerUserName: string,
     comment: string,
 }
 
 export interface Post {
-    idPost: number;
-    ownerUserId: number,
-    ownerUsername: string;
+    idPost: string;
     photoURL: string;
-    date: string;
-    userIdFromLikes: number[]
-    comments: Comment[];
 }

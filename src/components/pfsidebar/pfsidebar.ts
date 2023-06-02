@@ -51,7 +51,7 @@ class PFSidebar extends HTMLElement {
 
                 const Privacy = this.ownerDocument.createElement("button")
                 Privacy.className = "button"
-                Privacy.textContent="Privacy and security"
+                Privacy.textContent="Log out"
 
                 section.appendChild(Back)
                 section.appendChild(Edit)
