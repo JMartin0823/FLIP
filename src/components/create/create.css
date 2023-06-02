@@ -10,8 +10,8 @@
     display: flex;
     width: 30%;
     position: relative;
-    left: 19%;
-    top: 22%;
+    left: 25%;
+    top: 20%;
     text-align: center;
     color: #333333;
   }
@@ -29,6 +29,30 @@
       color: white;
     }
   
+    img{
+      position: absolute;
+      max-width: 6cm;
+      max-height: 10cm;
+      left: 29%;
+      top: 40.5%;
+    }
+
+    .url{
+      position: absolute;
+      left: 65.5%;
+      top: 53%;
+    }
+
+    .media{
+      width: 15%;
+      color: white;
+      font-size: 15px;
+      position: relative;
+      left: 62%;
+      top: 3%;
+
+    }
+
     p{
       width: 15%;
       text-align: center;
@@ -39,7 +63,7 @@
       opacity: 80%;
       position: relative;
       left: 62%;
-      top: -5%;
+      top: 8%;
     }
   
   .two {
@@ -47,33 +71,29 @@
     flex-direction: column;
     position: relative;
     right: 15.5%;
-    top: 45%;
+    top: 55%;
     align-items: center; 
     justify-content: center; 
   }
   
   .one{
       position: absolute;
-      margin-bottom: 20%;
+      margin-bottom: 11%;
       max-width: 30%;
-      left: 36.5%;
+      left: 41.5%;
   }
   
-  .email,
-  .password {
-    margin-bottom: 20px; 
-    
-  }
+
   .emailbar,
   .passbar{
     max-width: 200%; 
     padding: 10px;
-    border: transparent;
+    border-color: gray;
+    border-width: 2px solid;
     border-radius: 16px;
-    margin-bottom: 27px;
-    background-color: #D9D9D9; 
-    height: 1cm;
-    width: 13cm;
+    background-color: #d9d9d900; 
+    height: 0.7cm;
+    width: 8cm;
   }
   
   .signin{
@@ -147,7 +167,7 @@
       width:16%;
       position: relative;
       left: 61%;
-      top: -3%;
+      top: 10%;
      }
      
      .register:disabled {

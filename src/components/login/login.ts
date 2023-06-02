@@ -22,23 +22,6 @@ class Login extends HTMLElement {
         Firebase.loginUser(credentials);
       }
 
-      async validateCredentials() {
-        if (credentials.email === '' || credentials.password === '') {
-          window.alert('Please enter both email and password.');
-        } else {
-          try {
-            await Firebase.loginUser(credentials);
-            if (appState.user !== null) {
-              dispatch(navigate(Screens.HOMEPAGE));
-            } else {
-              window.alert('Invalid credentials. Please try again.');
-            }
-          } catch (error) {
-            window.alert('Invalid credentials. Please try again.');
-          }
-        }
-      }
-
         render() {
             if (this.shadowRoot) {
                 this.shadowRoot.innerHTML = ``;
@@ -76,7 +59,6 @@ class Login extends HTMLElement {
                 const login = this.ownerDocument.createElement("button")
                 login.className = "signin"
                 login.textContent="Sign in"
-                login.addEventListener("click", this.validateCredentials)
                 login.addEventListener("click", this.handleLoginButton)
 
 

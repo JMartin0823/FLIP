@@ -9,7 +9,7 @@ export enum Screens {
   HOMEPAGE = "HOMEPAGE",
   PROFILE = "PROFILE",
   EDITPROFILE = "EDITPROFILE",
-  CREATE = "CREATE",
+  CREATEPAGE = "CREATEPAGE",
 }
 
 export type AppState = {
@@ -18,8 +18,23 @@ export type AppState = {
   posts: Post[];
 };
 
+export enum UserActions {
+  "ADD" = "ADD",
+  "GET" = "GET",
+}
+
 export enum NavigationActions {
   "NAVIGATE" = "NAVIGATE",
+}
+
+export interface AddUserAction {
+  action: UserActions.ADD,
+  payload: User
+}
+
+export interface GetUserAction {
+  action: UserActions.GET,
+  payload: User[]
 }
 
 export interface NavigateAction {

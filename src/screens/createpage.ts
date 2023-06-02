@@ -11,11 +11,11 @@ class AppCreate extends HTMLElement {
 
         render() {
             if (this.shadowRoot) {
-                const login=this.ownerDocument.createElement("my-create")
+                const create=this.ownerDocument.createElement("my-create")
 
                 const all=this.ownerDocument.createElement("section")
                 all.className="all"
-                all.appendChild(login)
+                all.appendChild(create)
                 this.shadowRoot?.appendChild(all)
 
                 const css = this.ownerDocument.createElement("style");

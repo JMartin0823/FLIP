@@ -5,14 +5,14 @@ import { auth } from "../utils/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { navigate, setUserCredentials, } from "./actions";
 
-// onAuthStateChanged(auth, (user) => {
-//   if (user) {
-//     user.email !== null ? dispatch(setUserCredentials(user.email)) : '';
-//     dispatch(navigate(Screens.HOMEPAGE));
-//   } else {
-//     dispatch(navigate(Screens.LOGIN));
-//   }
-// });
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    user.email //null ? dispatch(setUserCredentials(user.email)) : '';
+    dispatch(navigate(Screens.HOMEPAGE));
+  } else {
+    dispatch(navigate(Screens.LOGIN));
+  }
+});
 
 const emptyState: AppState = {
   screen: Screens.LOGIN,

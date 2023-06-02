@@ -57,7 +57,7 @@ class AppHomePage extends HTMLElement {
                 const post = this.ownerDocument.createElement("button")
                 post.textContent="Post"
                 post.addEventListener("click", () =>{
-                    dispatch(navigate(Screens.CREATE))
+                    dispatch(navigate(Screens.CREATEPAGE))
                 } )
 
                 const aboutSection=this.ownerDocument.createElement("section")

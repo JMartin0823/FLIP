@@ -2,6 +2,7 @@ import { dispatch } from '../../store';
 import { navigate } from '../../store/actions';
 import { Screens } from '../../types/store';
 import styles from './create.css'
+
 class Create extends HTMLElement {
 
     constructor() {
@@ -43,22 +44,59 @@ class Create extends HTMLElement {
                 const header2 = this.ownerDocument.createElement("h2")
                 header2.textContent="Select files"
 
+                const url = this.ownerDocument.createElement("input")
+                url.type = "url"
+                url.className = "url"
+                url.placeholder="Image URL"
+                url.addEventListener('input', (event) => {
+                    const inputElement = event.target as HTMLInputElement;
+                    const imageUrl = inputElement.value;
+                    if (imageUrl) {
+                      const imgPreview = this.ownerDocument.createElement('img');
+                      imgPreview.src = imageUrl;
+                      imgPreview.alt = 'Preview';
+                      imgPreview.className = 'imgPreview';
+                      all.appendChild(imgPreview);
+                    }
+                  });
+
+                const fileInput = this.ownerDocument.createElement("input");
+                fileInput.type = "file";
+                fileInput.className = "media"
+                fileInput.addEventListener("change", () => {
+                const file = fileInput.files && fileInput.files[0]; 
+                if (file) {
+                console.log(file);
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                const imgPreview = this.ownerDocument.createElement("img");
+                if (e.target && e.target.result) {
+                imgPreview.src = e.target.result as string;
+                }
+                imgPreview.alt = "Preview";
+                imgPreview.className = "imgPreview";
+                all.appendChild(imgPreview);
+                };
+                reader.readAsDataURL(file);
+                }
+                });
+
                 const text = this.ownerDocument.createElement("p")
                 text.textContent="Great Choice!"
 
                 const register = this.ownerDocument.createElement("button")
                 register.className = "register"
                 register.textContent="Upload"
-                register.addEventListener("click", () =>{
-                    dispatch(navigate(Screens.REGISTER))
-                } )
-
+                
+            
                 all.appendChild(header)
                 all.appendChild(two)
                 two.appendChild(one)
                 one.appendChild(input2)
                 two.appendChild(login)
                 all.appendChild(header2)
+                all.appendChild(url)
+                all.appendChild(fileInput)
                 all.appendChild(text)
                 all.appendChild(register)
 

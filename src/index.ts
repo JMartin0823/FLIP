@@ -3,6 +3,7 @@ import "./screens/loginpage"
 import "./screens/registerpage"
 import "./screens/profilepage"
 import "./screens/editprofile"
+import "./screens/createpage"
 import "./components/export"
 import styles from "./index.css"
 import { Screens } from "./types/store"
@@ -51,7 +52,7 @@ class AppContainer extends HTMLElement {
 
                 break;
 
-                case Screens.EDITPROFILE:
+                case Screens.CREATEPAGE:
                     const createpost = this.ownerDocument.createElement('app-create');
                     this.shadowRoot?.appendChild(createpost);
     
