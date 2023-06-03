@@ -9,7 +9,7 @@ export enum Attribut {
     "image3"= "image3",
     "image4"= "image4",
     "date"= "date",
-    "count"= "count",
+    "caption"= "caption",
 }
 
 class Card extends HTMLElement {
@@ -21,7 +21,7 @@ class Card extends HTMLElement {
     image3?: string;
     image4?: string;
     date?: string;
-    count?: number;
+    caption?: string;
     
     static get observedAttributes() {
         const attrs: Record<Attribut, null> = {
@@ -33,7 +33,7 @@ class Card extends HTMLElement {
             image3: null,
             image4: null,
             date: null,
-            count: null,
+            caption: null,
         };
         return Object.keys(attrs);
     }
@@ -55,8 +55,8 @@ class Card extends HTMLElement {
         ) {
             switch (propName) {
 
-                case Attribut.count:
-                this.count = newValue ? Number(newValue) : undefined;
+                case Attribut.caption:
+                this.caption = newValue ? String(newValue) : undefined;
                 break;
 
                 default:
@@ -105,12 +105,7 @@ class Card extends HTMLElement {
               <section class="tweet-img-wrap">
                 <img src="${this.image}" alt="" class="tweet-img">
               </section>
-              <label class="pepe">
-              <button><img src="${this.image2}" height ="30" width="30"</button>
-                <button><img src="${this.image3}" height ="30" width="30"</button>
-                <p>${this.count || 0}</p>
-                <button><img src="${this.image4}" height ="30" width="30"</button>
-              </label>
+             <p>${this.caption || 0}</p>
               </section>
                 `;
                 const css = this.ownerDocument.createElement("style");

@@ -1,3 +1,4 @@
+import "./screens/landing"
 import "./screens/homepage"
 import "./screens/loginpage"
 import "./screens/registerpage"
@@ -26,6 +27,12 @@ class AppContainer extends HTMLElement {
             case Screens.HOMEPAGE:
                 const homepage = this.ownerDocument.createElement('app-homepage');
                 this.shadowRoot?.appendChild(homepage);
+                break;
+
+                case Screens.LANDING:
+                const landing = this.ownerDocument.createElement('app-landing');
+                this.shadowRoot?.appendChild(landing);
+
                 break;
 
                 case Screens.LOGIN:

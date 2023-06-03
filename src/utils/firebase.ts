@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
-import { User } from "../types/user";
 import { Post } from "../types/posts";
 import {
   createUserWithEmailAndPassword,
@@ -58,7 +57,7 @@ const loginUser = async ({
 
 const db = getFirestore(app);
 
-const addPost = async (product: Omit<User, "id">) => {
+const addPost = async (product: Omit<Post, "id">) => {
   try {
     const where = collection(db, "products");
     await addDoc(where, product);
@@ -68,15 +67,13 @@ const addPost = async (product: Omit<User, "id">) => {
   }
 };
 
-
-
 // const getProducts = async () => {
 //   const querySnapshot = await getDocs(collection(db, "products"));
-//   const transformed: Array<User> = [];
+//   const transformed: Array<Post> = [];
 
 //   querySnapshot.forEach((doc) => {
-//     const data: Omit<User, "id"> = doc.data() as any;
-//     transformed.push({ idUser, email, username, ...data });
+//     const data: Omit<Post, "id"> = doc.data() as any;
+//     transformed.push([]);
 //   });
 
 //   return transformed;
@@ -84,7 +81,7 @@ const addPost = async (product: Omit<User, "id">) => {
 
 export default {
   addPost,
-//   getProducts,
+  // getProducts,
   registerUser,
   loginUser,
 };

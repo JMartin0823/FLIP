@@ -55,7 +55,7 @@ class Bottombar extends HTMLElement {
             const More = this.shadowRoot.querySelector(".b1");
         if (More) {
             More.addEventListener("click", () => {
-                dispatch(navigate(Screens.LOGIN));
+                dispatch(navigate(Screens.CREATEPAGE));
             });}
 
             const home = this.shadowRoot.querySelector(".b2");
