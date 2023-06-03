@@ -1,7 +1,8 @@
-import { dispatch } from '../../store';
-import { navigate } from '../../store/actions';
+import { appState, dispatch } from '../../store';
+import { navigate, setUserCredentials } from '../../store/actions';
 import { Screens } from '../../types/store';
 import styles from './pfsidebar.css'
+
 class PFSidebar extends HTMLElement {
 
     constructor() {
@@ -11,6 +12,14 @@ class PFSidebar extends HTMLElement {
 
     connectedCallback() {
         this.render();
+    }
+
+    logOutUser() {
+        if(appState.user !== null || ''){
+            sessionStorage.clear();
+            dispatch(navigate(Screens.LOGIN));
+            location.reload();
+        }
     }
 
         render() {
@@ -52,6 +61,7 @@ class PFSidebar extends HTMLElement {
                 const Privacy = this.ownerDocument.createElement("button")
                 Privacy.className = "button"
                 Privacy.textContent="Log out"
+                Privacy.addEventListener("click", this.logOutUser)
 
                 section.appendChild(Back)
                 section.appendChild(Edit)
