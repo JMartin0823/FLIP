@@ -1,3 +1,6 @@
+import { appState, dispatch } from "../store";
+import { navigate, setUserCredentials } from "../store/actions";
+import { Screens } from "../types/store";
 import styles from "./profilepage.css"
 class AppProfile extends HTMLElement {
 
