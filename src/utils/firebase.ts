@@ -59,7 +59,7 @@ const db = getFirestore(app);
 
 const addPost = async (product: Omit<Post, "id">) => {
   try {
-    const where = collection(db, "products");
+    const where = collection(db, "posts");
     await addDoc(where, product);
     console.log("se añadió con éxito");
   } catch (error) {
