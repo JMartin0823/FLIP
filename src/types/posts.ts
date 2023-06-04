@@ -3,3 +3,9 @@ export interface Post {
     photoURL: string;
     caption: string;
 }
+export interface Post {
+    caption: string;
+    url: string;
+    btn_text: string;
+    text: string;
+}
