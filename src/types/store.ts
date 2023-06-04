@@ -4,7 +4,12 @@ export type Observer = ({ render: () => void } & HTMLElement);
 
 export type AppState = {
     trips: any;
-    posts: Post[]
+
+    user: {
+      userName: string,
+      email: string,
+  },
+  posts: Post[]
 }
 
 export enum Screens {
@@ -17,9 +22,24 @@ export enum Screens {
   CREATEPAGE = "CREATEPAGE",
 }
 
+
+export enum AuthActions {
+    "LOGIN" = "LOGIN",
+    "LOGOUT" = "LOGOUT",
+}
+
 export enum PostsActions {
   "ADD" = "ADD",
   "GET" = "GET",
+}
+export interface LogInAction {
+  action: AuthActions.LOGIN,
+  payload: Pick<AppState, "user">
+}
+
+export interface LogOutAction {
+  action: AuthActions.LOGOUT,
+  payload: void
 }
 
 
@@ -32,6 +52,4 @@ export interface GetPostsAction {
   action: PostsActions.GET,
   payload: Post[]
 }
-
-
-export type Actions = AddPostAction | GetPostsAction;
+export type Actions = LogInAction | LogOutAction | AddPostAction | GetPostsAction;
